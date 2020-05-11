@@ -1,0 +1,27 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    // "eslint.validate": [
+    //   "javascript",
+    //   "javascriptreact",
+    //   {
+    //     "language": "vue",
+    //     "autoFix": true
+    //   }
+    // ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true,
+        "source.fixAll.eslint": true
+    },
+    "prettier.singleQuote": true,
+    "prettier.eslintIntegration": true,
+    "prettier.tslintIntegration": true,
+    "vetur.format.defaultFormatter.js": "none",
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "git.enableSmartCommit": true
+}

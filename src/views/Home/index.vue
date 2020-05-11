@@ -7,6 +7,6 @@
 </style>
 
 <script>
-import indexjs from "./index.js";
-export default { ...indexjs };
+import indexjs from './index.js'
+export default { ...indexjs }
 </script>
