@@ -1,9 +1,11 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    dfasdfasdfsd
+  </div>
 </template>
 
 <style scope lang="scss">
-// @import "./index.scss";
+@import './index.scss';
 </style>
 
 <script>
