@@ -20,13 +20,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/variables.scss';
 .app-main {
-  /* 50= navbar  50  */
-  min-height: calc(100vh - 54px);
-  width: 100%;
-  position: relative;
   overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  background-color: $appBg;
 }
 </style>
-
-<style lang="scss" scoped></style>

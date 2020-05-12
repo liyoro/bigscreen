@@ -19,6 +19,8 @@ export default {
 @import '~@/styles/variables.scss';
 .app-head {
   height: 50px;
+  line-height: 50px;
+  width: 100%;
   background-color: $headBg;
 }
 </style>

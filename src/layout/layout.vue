@@ -1,10 +1,19 @@
 <template>
-  <div
-    class="app-wrapper"
-    :style="{ '-webkit-transform': 'scale(' + bill + ')' }"
-  >
-    <app-head></app-head>
-    <div class="main-container">
+  <div>
+    <div
+      class="app-wrapper"
+      :style="{
+        transformOrigin: 'center top',
+        transform: `scale(${scalseNum},${scalseNum})`,
+        '-webkit-transform': `scale(${scalseNum},${scalseNum})`,
+        '-moz-transform': `scale(${scalseNum},${scalseNum})`,
+        '-o-transform': `scale(${scalseNum},${scalseNum})`,
+        '-ms-transform': `scale(${scalseNum},${scalseNum})`,
+      }"
+    >
+      <!-- 头部栏 -->
+      <app-head></app-head>
+      <!-- 内容栏 -->
       <app-main />
     </div>
   </div>
@@ -19,37 +28,37 @@ export default {
     AppMain,
     AppHead,
   },
-  computed: {
-    bill: function() {
-      return window.innerWidth / 1366
+  data() {
+    return {
+      scalseNum: 1, //缩放比例
+    }
+  },
+  computed: {},
+  mounted() {
+    //计算缩放比例
+    this.resize_window()
+    window.addEventListener('resize', () => {
+      this.resize_window()
+    })
+  },
+  methods: {
+    //计算缩放比例
+    resize_window() {
+      let w_height = Number(document.documentElement.clientWidth / 1366)
+      // let w_height = Number(window.innerWidth / 1366)
+      this.scalseNum = w_height
     },
   },
-  mounted() {},
-  methods: {},
 }
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/variables.scss';
-
 .app-wrapper {
+  width: 1366px;
+  height: 768px;
+  transform-origin: center top 0px;
   position: relative;
-  height: 100%;
-  width: 100%;
-  min-width: 1366px;
-  background-color: $appBg;
-  // &:after {
-  //   content: '';
-  //   display: table;
-  //   clear: both;
-  // }
-  // .container {
-  //   overflow: hidden;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  // }
+  left: 50%;
+  margin-left: -683px;
 }
 </style>
