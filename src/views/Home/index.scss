@@ -1,2 +1,21 @@
 .home {
+    height: 100%;
+
+    .aside-left {
+        background-color: #D3DCE6;
+        color: #333;
+        text-align: center;
+        height: 100%;
+        width: 340px;
+        float: left;
+    }
+
+    .aside-right {
+        background-color: #1E1E1E;
+        color: #333;
+        text-align: center;
+        height: 100%;
+        width: 340px;
+        float: right;
+    }
 }

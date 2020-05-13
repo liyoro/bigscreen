@@ -1,6 +1,11 @@
 <template>
-  <div class="home">
-    dfasdfasdfsd
+  <div class="home" @click="isHideSideView = !isHideSideView">
+    <transition name="el-fade-in-linear">
+      <div v-show="!isHideSideView" class="aside-left">AsideLeft</div>
+    </transition>
+    <transition name="el-fade-in">
+      <div v-show="!isHideSideView" class="aside-right">AsideRight</div>
+    </transition>
   </div>
 </template>
 
