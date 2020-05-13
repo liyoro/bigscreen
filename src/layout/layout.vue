@@ -37,16 +37,16 @@ export default {
   mounted() {
     //计算缩放比例
     this.resize_window()
+    // 监听浏览器缩放，实时改变大屏宽高
     window.addEventListener('resize', () => {
       this.resize_window()
     })
   },
   methods: {
-    //计算缩放比例
+    //计算缩放比例（可见区域宽度）
     resize_window() {
-      let w_height = Number(document.documentElement.clientWidth / 1366)
-      // let w_height = Number(window.innerWidth / 1366)
-      this.scalseNum = w_height
+      let w_width = Number(document.documentElement.clientWidth / 1366)
+      this.scalseNum = w_width
     },
   },
 }

@@ -1,7 +1,7 @@
 <!--
  * @Author: liyoro
  * @since: 2020-05-12 19:29:18
- * @lastTime: 2020-05-12 19:49:48
+ * @lastTime: 2020-05-13 08:32:33
  -->
 <template>
   <div class="app-head">dfsdadsdfs</div>
@@ -18,8 +18,8 @@ export default {
 <style lang="scss" scoped>
 @import '~@/styles/variables.scss';
 .app-head {
-  height: 50px;
-  line-height: 50px;
+  height: $headHeight;
+  line-height: $headHeight;
   width: 100%;
   background-color: $headBg;
 }

@@ -26,7 +26,7 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50px;
+  top: $headHeight;
   bottom: 0;
   background-color: $appBg;
 }
