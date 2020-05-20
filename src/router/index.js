@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Layout from '../layout/layout'
+// import Layout from '../layout/scaleLayout/layout'
+import Layout from '../layout/vwLayout/layout'
+
 
 Vue.use(VueRouter)
 
