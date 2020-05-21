@@ -5,6 +5,7 @@
   .aside-left {
     background-color: #d3dce6;
     color: #333;
+    opacity: 0.5;
     text-align: center;
     height: 100%;
     width: vw(478);
@@ -14,9 +15,16 @@
   .aside-right {
     background-color: #1e1e1e;
     color: #333;
+    opacity: 0.5;
     text-align: center;
     height: 100%;
     width: vw(478);
     float: right;
+  }
+
+  .charts-1 {
+    width: 100%;
+    height: vh(330);
+    background-color: red;
   }
 }

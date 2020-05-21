@@ -1,10 +1,14 @@
 <template>
   <div class="home" @click="isHideSideView = !isHideSideView">
     <transition name="el-fade-in-linear">
-      <div v-show="!isHideSideView" class="aside-left">AsideLeft</div>
+      <div @click.stop="" v-show="!isHideSideView" class="aside-left">
+        <div class="charts-1" ref="chart1"></div>
+      </div>
     </transition>
     <transition name="el-fade-in">
-      <div v-show="!isHideSideView" class="aside-right">AsideRight</div>
+      <div @click.stop="" v-show="!isHideSideView" class="aside-right">
+        AsideRight
+      </div>
     </transition>
   </div>
 </template>

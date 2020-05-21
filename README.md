@@ -1,29 +1,26 @@
-# bigscreen
+# 大屏展示
 
-## Project setup
+适合页面交互少的大屏展示需求
+
+## 初始化
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 生产打包
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
+### 大屏布局
 
-### Lints and fixes files
-```
-npm run lint
-```
+#### 通过动态缩放（scale）实现
+> 详见目录 <font color=#508FF2>layout</font> --- <font color=#508FF2>scaleLayout</font> 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### 通过px动态转换vw、vh实现
+> 详见目录 <font color=#508FF2>layout</font> --- <font color=#508FF2>vwLayout</font> 
