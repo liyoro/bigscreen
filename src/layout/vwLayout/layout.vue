@@ -28,9 +28,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/scale.scss';
 .app-wrapper {
   width: 100vw;
   height: 100vh;
+  min-height: 777px;
   transform-origin: center top 0px;
   position: relative;
   left: 50%;

@@ -1,5 +1,5 @@
-$ui-width: 1920; //设计图的基准宽
-$ui-height: 1092; //设计图的基准高
+$ui-width: 1366; //设计图的基准宽
+$ui-height: 777; //设计图的基准高
 
 @function vw($px) {
   @return $px / $ui-width * 100vw;

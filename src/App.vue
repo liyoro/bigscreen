@@ -11,7 +11,7 @@ export default {
     return {}
   },
   mounted: function() {},
-  methods: {},
+  methods: {}
 }
 </script>
 
@@ -19,6 +19,6 @@ export default {
 #app {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: scroll;
 }
 </style>

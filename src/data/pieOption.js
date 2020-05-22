@@ -27,7 +27,7 @@ export const pieOption = {
         {
             name: '告警分类',
             type: 'pie',
-            radius: ['50%', '80%'],
+            radius: ['45%', '80%'],
             center: ['50%', '50%'],
             avoidLabelOverlap: true,
             animation: true,
