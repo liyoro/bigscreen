@@ -1,42 +1,63 @@
 export const pieOption = {
+    // title: {
+    //     text: '告警分类',
+    //     left: 'center',
+    //     top: 0,
+    //     padding: [0, 0, 58, 0],
+    //     textStyle: {
+    //         color: '#FFFFFF',
+    //         fontSize: '12'
+    //     }
+    // },
     tooltip: {
         trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)'
+        formatter: '{b}: {c}',
+        textStyle: {
+            color: '#FFFFFF',
+            fontSize: '12'
+        },
+        position: ['50%', '50%']
     },
     legend: {
-        orient: 'vertical',
-        left: 10,
-        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+        show: false,
+        orient: 'horizontal',
+        data: ['环境告警', '穿戴告警', '设备告警']
     },
     series: [
         {
-            name: '访问来源',
+            name: '告警分类',
             type: 'pie',
-            radius: ['50%', '70%'],
-            avoidLabelOverlap: false,
+            radius: ['50%', '80%'],
+            center: ['50%', '50%'],
+            avoidLabelOverlap: true,
+            animation: true,
+            top: 0,
             label: {
                 show: false,
-                position: 'center'
+                position: 'inside',
+                formatter: '{b}:{c}'
             },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: '30',
-                    fontWeight: 'bold'
-                }
-            },
+            // emphasis: {
+            //     label: {
+            //         show: true,
+            //         fontSize: '30',
+            //         fontWeight: 'bold'
+            //     }
+            // },
             labelLine: {
-                show: false
+                show: false,
+                length: 5,
+                length2: 5,
+                smooth: true
             },
             data: [
-                { value: 335, name: '直接访问' },
-                { value: 310, name: '邮件营销' },
-                { value: 234, name: '联盟广告' },
-                { value: 135, name: '视频广告' },
-                { value: 1548, name: '搜索引擎' }
+                { value: 335, name: '环境告警' },
+                { value: 310, name: '穿戴告警' },
+                { value: 234, name: '设备告警' }
             ]
         }
-    ]
+    ],
+    color: ['#343C6A', '#4F5B93', '#1F213C']
 }
 
 // {

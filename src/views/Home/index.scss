@@ -3,13 +3,16 @@
   height: 100%;
 
   .aside-left {
-    background-color: #d3dce6;
+    // background-color: #d3dce6;
     color: #333;
-    opacity: 0.5;
+    // opacity: 0.5;
     text-align: center;
     height: 100%;
     width: vw(478);
     float: left;
+    background-image: url(~@/assets/images/side-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   .aside-right {
@@ -22,9 +25,74 @@
     float: right;
   }
 
-  .charts-1 {
+  .seg-day {
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-size: vw(12);
+    color: #151c2e;
+  }
+  .seg-day2 {
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-size: vw(12);
+    color: #81acff;
+  }
+  .seg-day-select {
+    background-image: url(~@/assets/images/seg-day-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .seg-month {
+    width: 50%;
+    height: 100%;
+    float: right;
+    font-size: vw(12);
+    color: #151c2e;
+  }
+  .seg-month2 {
+    width: 50%;
+    height: 100%;
+    float: right;
+    font-size: vw(12);
+    color: #81acff;
+  }
+  .seg-month-select {
+    background-image: url(~@/assets/images/seg-month-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .item-1 {
     width: 100%;
-    height: vh(330);
-    background-color: red;
+    height: vh(185);
+    // background-color: red;
+    .item-title {
+      height: vh(35);
+      min-height: 35px;
+      // background-color: red;
+      .seg-view {
+        border: vw(1) solid #81acff;
+        border-radius: vw(2);
+        width: vw(68);
+        height: vh(18);
+        min-width: 68px;
+        min-height: 18px;
+        float: right;
+        margin-top: vh(12);
+        margin-right: vw(10);
+      }
+    }
+  }
+  .charts-1 {
+    width: 50%;
+    height: 100%;
+    float: left;
+  }
+  .charts-2 {
+    width: 50%;
+    height: 100%;
+    float: right;
   }
 }

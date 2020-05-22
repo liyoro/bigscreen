@@ -1,7 +1,7 @@
 /*
  * @Author: liyoro
  * @since: 2020-05-11 18:01:00
- * @lastTime: 2020-05-11 18:01:00
+ * @lastTime: 2020-05-22 18:08:28
  */
 import echarts from 'echarts/lib/echarts'
 
@@ -20,22 +20,39 @@ export default {
         return {
             isHideSideView: false,
             pieChart: '',
+            // 日月选中
+            isSegSelect: true,
+
         }
     },
     mounted() {
         this.draw()
-        let vm = this
-        window.onresize = function () {
-            vm.pracChart.resize()
-        }
+        this.init()
     },
     methods: {
-
+        hideSide() {
+            this.isHideSideView = !this.isHideSideView
+        },
+        switcher() {
+            this.isSegSelect = !this.isSegSelect
+            console.log(2222, this.isSegSelect)
+        },
         draw() {
             // 实例化echarts对象
             this.pieChart = echarts.init(this.$refs.chart1)
             //下面是具体的配置
             this.pieChart.setOption(pieOption)
         },
+        init() {
+            let vm = this
+            setTimeout(() => {
+                window.addEventListener('resize', () => {
+                    vm.pieChart.resize()
+                })
+            }, 50)
+        },
+        destroyed() {
+            window.removeEventListener('resize', this.init, 20)
+        }
     }
 }
