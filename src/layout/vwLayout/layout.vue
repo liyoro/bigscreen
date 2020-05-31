@@ -32,7 +32,7 @@ export default {
 .app-wrapper {
   width: 100vw;
   height: 100vh;
-  min-height: 777px;
+  min-height: 768px;
   transform-origin: center top 0px;
   position: relative;
   left: 50%;

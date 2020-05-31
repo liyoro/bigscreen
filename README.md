@@ -24,3 +24,9 @@ npm run build
 
 #### 通过px动态转换vw、vh实现
 > 详见目录 <font color=#508FF2>layout</font> --- <font color=#508FF2>vwLayout</font> 
+
+
+### 大屏常用组件
+
+#### 圆环
+> 详见目录 <font color=#508FF2>components</font> --- <font color=#508FF2>svgcircle.vue</font> 

@@ -90,18 +90,18 @@ a:active {
 }
 
 //
-// @media only screen and (max-width: 1600px) and (min-width: 1280px){
-//   html{
-//     font-size: 14px;
-//   }
-// }
-// @media only screen and (max-width: 1280px) and (min-width: 960px){
-//   html{
-//     font-size: 12px;
-//   }
-// }
-// @media only screen and (max-width: 960px){
-//   html{
-//     font-size: 10px;
-//   }
-// }
+@media only screen and (max-width: 1920px) and (min-width: 1366px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1366px) and (min-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 10px;
+  }
+}

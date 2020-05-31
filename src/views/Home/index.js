@@ -3,19 +3,22 @@
  * @since: 2020-05-11 18:01:00
  * @lastTime: 2020-05-22 18:08:28
  */
-import echarts from 'echarts/lib/echarts'
-
+// import echarts from 'echarts/lib/echarts'
 // import 'echarts/lib/chart/bar'
-import 'echarts/lib/chart/pie'
-// 再引入你需要使用的图表类型，标题，提示信息等
-import 'echarts/lib/component/tooltip'
-import 'echarts/lib/component/legend'
-import 'echarts/lib/component/title'
+// import 'echarts/lib/chart/pie'
+// import 'echarts/lib/component/tooltip'
+// import 'echarts/lib/component/legend'
+// import 'echarts/lib/component/title'
 
 // import { pieOption } from '@/data/pieOption'
 
+import svgcircle from '@/components/svgcircle'
+
 export default {
     name: 'Home',
+    components: {
+        'svgcircle': svgcircle,
+    },
     data() {
         return {
             isHideSideView: false,
@@ -98,39 +101,53 @@ export default {
                 ],
                 color: ['#34386E', '#4F5698']
             },
+            // svgcircle相关配置
+            svgcircleText: '120',
+            // 半径
+            svgcircleSize: '38',
+            // 文字大小
+            svgcircleTextSize: '20',
         }
     },
     mounted() {
-        this.draw()
+        // this.draw()
+        this.resizeCircle()
         this.init()
+    },
+    beforeDestroy() {
+        this.destroyed()
     },
     methods: {
         hideSide() {
             this.isHideSideView = !this.isHideSideView
         },
-        switcher() {
-            this.isSegSelect = !this.isSegSelect
-        },
         draw() {
-            // 实例化echarts对象
-            this.pieChart1 = echarts.init(this.$refs.chart1)
-            //下面是具体的配置
-            this.pieChart1.setOption(this.pieOption1)
+            // this.pieChart1 = echarts.init(this.$refs.chart1)
+            // this.pieChart1.setOption(this.pieOption1)
 
-            this.pieChart2 = echarts.init(this.$refs.chart2)
-            this.pieChart2.setOption(this.pieOption2)
+            // this.pieChart2 = echarts.init(this.$refs.chart2)
+            // this.pieChart2.setOption(this.pieOption2)
+
+        },
+        // 动态调整圆环里的文字，根据自己需求定义
+        resizeCircle() {
+            window.screenWidth = document.body.clientWidth
+            let screenWidth = window.screenWidth
+            let tempSize = Math.round((this.svgcircleSize / 1366) * screenWidth)
+            console.log('svgcircleSize:', screenWidth, tempSize)
+            this.svgcircleSize = tempSize
+            this.svgcircleTextSize = tempSize * 0.6
         },
         init() {
             let vm = this
             setTimeout(() => {
                 window.addEventListener('resize', () => {
-                    vm.pieChart1.resize()
-                    vm.pieChart2.resize()
+                    vm.resizeCircle()
                 })
             }, 50)
         },
         destroyed() {
             window.removeEventListener('resize', this.init, 20)
-        }
+        },
     }
 }
