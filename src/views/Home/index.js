@@ -13,11 +13,13 @@
 // import { pieOption } from '@/data/pieOption'
 
 import svgcircle from '@/components/svgcircle'
+import equalizerbar from '@/components/equalizerbar'
 
 export default {
     name: 'Home',
     components: {
         'svgcircle': svgcircle,
+        'equalizer-bar': equalizerbar,
     },
     data() {
         return {
@@ -104,7 +106,7 @@ export default {
             // svgcircle相关配置
             svgcircleText: '120',
             // 半径
-            svgcircleSize: '38',
+            svgcircleSize: '98',//38
             // 文字大小
             svgcircleTextSize: '20',
         }

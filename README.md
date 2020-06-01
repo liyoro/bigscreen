@@ -30,3 +30,14 @@ npm run build
 
 #### 圆环
 > 详见目录 <font color=#508FF2>components</font> --- <font color=#508FF2>svgcircle.vue</font> 
+
+![](./pictures/Snip20200601_15_min.png)
+
+#### 均衡器样式柱图
+> 详见目录 <font color=#508FF2>components</font> --- <font color=#508FF2>equalizerbar.vue</font> 
+
+![](./pictures/Snip20200601_17_min.png)
+
+
+
+
