@@ -25,7 +25,6 @@
 <script>
 export default {
   name: 'equalizer-bar',
-  // props: ['max', 'active', 'normalcolor', 'activecolor'],
   props: {
     // 最大小横杆数量
     max: {
@@ -51,6 +50,7 @@ export default {
   computed: {
     // calequalizerheight() {
     //   let height = this.$refs.liequalizerbar.offsetHeight
+    //   return (height - (this.max - 1) * 5) / this.max + 'px'
     // }
   },
   data() {
@@ -60,7 +60,7 @@ export default {
   },
   mounted() {
     let height = this.$refs.liequalizerbar.offsetHeight
-    console.log(222, height)
+    // console.log(222, height)
     this.calequalizerheight = (height - (this.max - 1) * 5) / this.max + 'px'
   },
   methods: {},
